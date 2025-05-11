@@ -41,7 +41,7 @@ jobs:
       - name: Image scan
         run: trivy image sakthisudhakar/tic-tac-toe:latest > trivyimagedeploy.txt
       - name: Deploy to container
-        run: docker run -d --name game -p 3000:3000 sevenajay/tic-tac-toe:latest
+        run: docker run -d --name game -p 3000:3000 sakthisudhakar/tic-tac-toe:latest
       - name: Update kubeconfig
         run: aws eks --region ap-south-1 update-kubeconfig --name EKS_CLOUD
       - name: Deploy to kubernetes
